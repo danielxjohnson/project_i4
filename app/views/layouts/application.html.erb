@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjectI</title>
-  <%= stylesheet_link_tag :all %>
+  <title><%= title %></title>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <%= render 'layouts/stylesheets' %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="container">
+		<%= render 'layouts/header' %>
+		<section class="round">
+			<%= yield %>
+		</section>
+	</div>
 </body>
 </html>

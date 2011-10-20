@@ -1,4 +1,13 @@
 ProjectI::Application.routes.draw do
+  get "users/new"
+
+  get "pages/secret"
+  get "pages/home"
+  
+  match '/secret', :to => 'pages#secret'
+  match '/signup', :to => 'users#new'
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
