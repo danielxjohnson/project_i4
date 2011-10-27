@@ -1,12 +1,20 @@
 ProjectI::Application.routes.draw do
-  get "users/new"
-
-  get "pages/secret"
-  get "pages/home"
+	#get "users/new"
+  	get "pages/secret"
+  	get "pages/home"
+  	get "sessions/new"
   
-  match '/secret', :to => 'pages#secret'
-  match '/signup', :to => 'users#new'
-  root :to => 'pages#home'
+  	match '/secret', :to => 'pages#secret'
+  	#match '/signup', :to => 'users#new'
+  	root :to => 'pages#home'
+  
+  	get "logout" => "sessions#destroy", :as => "logout"
+	get "login" => "sessions#new", :as => "login"
+	get "signup" => "users#new", :as => "signup"
+	get "secret" => "pages#secret", :as =>"secret"
+	
+	resources :users
+	resources :sessions, :only => [:new, :create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
