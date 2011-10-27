@@ -9,11 +9,7 @@ gem 'sorcery'
 group :development do
 	gem 'rspec-rails', '2.0.1'
 	gem 'faker', '0.3.1'
-       if RUBY_VERSION =~ /1.9/ 
-         gem 'ruby-debug19' 
-       else 
-         gem 'ruby-debug' 
-       end 
+      #   gem 'ruby-debug19' 
 end
 
 group :test do
@@ -21,11 +17,11 @@ group :test do
 	gem 'webrat', '0.7.1'
 	gem 'factory_girl_rails', '1.0'
 	gem 'faker', '0.3.1'
-       if RUBY_VERSION =~ /1.9/ 
-         gem 'ruby-debug19' 
-       else 
-         gem 'ruby-debug' 
-       end 
+       #if RUBY_VERSION =~ /1.9/ 
+      #   gem 'ruby-debug19' 
+       #else 
+       #  gem 'ruby-debug' 
+       #end 
 end
 
 # Bundle edge Rails instead:
