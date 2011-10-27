@@ -9,6 +9,11 @@ gem 'sorcery'
 group :development do
 	gem 'rspec-rails', '2.0.1'
 	gem 'faker', '0.3.1'
+       if RUBY_VERSION =~ /1.9/ 
+         gem 'ruby-debug19' 
+       else 
+         gem 'ruby-debug' 
+       end 
 end
 
 group :test do
@@ -16,6 +21,11 @@ group :test do
 	gem 'webrat', '0.7.1'
 	gem 'factory_girl_rails', '1.0'
 	gem 'faker', '0.3.1'
+       if RUBY_VERSION =~ /1.9/ 
+         gem 'ruby-debug19' 
+       else 
+         gem 'ruby-debug' 
+       end 
 end
 
 # Bundle edge Rails instead:
@@ -30,8 +40,9 @@ gem 'sqlite3'
 # gem 'capistrano'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
- gem 'ruby-debug'
+# gem 'ruby-debug'
 # gem 'ruby-debug19', :require => 'ruby-debug'
+# gem 'ruby-debug19'
 
 # Bundle the extra gems:
 # gem 'bj'
