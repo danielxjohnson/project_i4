@@ -8,7 +8,7 @@ require 'rake'
 include Rake::DSL
 ProjectI::Application.load_tasks
 
-module ::project_i  
+module ::PROJECT_I 
   class Application
     include Rake::DSL
   end
